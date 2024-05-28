@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/InfoLearnPolygon/static/css/main.001bbbf5.css",
+    "main.js": "/InfoLearnPolygon/static/js/main.97fc3dd7.js",
+    "static/js/453.ed3810f9.chunk.js": "/InfoLearnPolygon/static/js/453.ed3810f9.chunk.js",
+    "static/media/waterfall.png": "/InfoLearnPolygon/static/media/waterfall.bdd80cefa6b66d33a916.png",
+    "static/media/Katarium_start.png": "/InfoLearnPolygon/static/media/Katarium_start.01f6933fab7e82d4d010.png",
+    "static/media/Behman.png": "/InfoLearnPolygon/static/media/Behman.3ec8433855c885856e2b.png",
+    "static/media/map.png": "/InfoLearnPolygon/static/media/map.853bafb8b4f88e9be56a.png",
+    "static/media/Tina.png": "/InfoLearnPolygon/static/media/Tina.eadf80e41971c17ce295.png",
+    "index.html": "/InfoLearnPolygon/index.html",
+    "main.001bbbf5.css.map": "/InfoLearnPolygon/static/css/main.001bbbf5.css.map",
+    "main.97fc3dd7.js.map": "/InfoLearnPolygon/static/js/main.97fc3dd7.js.map",
+    "453.ed3810f9.chunk.js.map": "/InfoLearnPolygon/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.001bbbf5.css",
+    "static/js/main.97fc3dd7.js"
+  ]
+}
