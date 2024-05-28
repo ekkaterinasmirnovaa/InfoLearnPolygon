@@ -132,26 +132,39 @@ function AuthPage({ goToinformationPage }) {
 
 
 function MagicButton({ goToAuth }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   const buttonStyle = {
-    opacity: 0.1,
-    transition: 'opacity 1s ease',
+    opacity: isHovered ? 1 : 0.1,
+    transition: 'opacity 0.3s ease',
     padding: '10px 20px',
+    position: "fixed",
     backgroundColor: '#007bff',
     color: '#fff',
     border: 'none',
-    position: "fixed",
     borderRadius: '4px',
     cursor: 'pointer',
-    ':hover': {
-      opacity: 1,
-    },
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   return (
-    <button style={buttonStyle}>
-      Домой{goToAuth}
+    <button
+      onClick={goToAuth()}
+      style={buttonStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      Домой
     </button>
   );
+
 }
 
 
