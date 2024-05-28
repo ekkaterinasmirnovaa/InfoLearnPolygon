@@ -86,9 +86,6 @@ function LoginForm() {
 function RegForm() {
   return (
     <div className="ring">
-      {/* <i style={{ '--clr': '#00ff0a' }}></i>
-      <i style={{ '--clr': '#ff0057' }}></i>
-      <i style={{ '--clr': '#fffd44' }}></i> */}
       <div className="login">
         {/* <h2>Login</h2> */}
         <div className="inputBx">
@@ -98,12 +95,14 @@ function RegForm() {
           <input type="password" placeholder="Пароль" />
         </div>
         <div className="inputBx">
+          <input type="phone" placeholder="Номер телефона" />
+        </div>
+        <div className="inputBx">
+          <input type="group" placeholder="Номер группы" />
+        </div>
+        <div className="inputBx">
           <input type="submit" value="Войти" />
         </div>
-        {/* <div className="links"> */}
-        {/* <a href="#">Восстановление доступа</a> */}
-        {/* <a href="#">Signup</a> */}
-        {/* </div> */}
       </div>
     </div>
   );
@@ -264,7 +263,7 @@ function InformationPage({ goToAuth }) {
 }
 
 function App() {
-  const [page, setPage] = useState("auth");
+  const [page, setPage] = useState("information");
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
   const [infoIsOpen, setInfoIsOpen] = useState(false);
   return (
