@@ -48,7 +48,7 @@ function Burger({ isOpen, open, close, page }) {
         }}
         style={{
           border: "0px solid #000000",
-          background: page() === "autism" ? "#E1D6E7" : "#EFEEEC"
+          background: page() === "information" ? "#E1D6E7" : "#EFEEEC"
         }}>
         {isOpen ? <div style={{ border: "0px solid #000000" }}>X</div> : "="}
       </button>
@@ -113,7 +113,7 @@ function RegForm() {
 
 
 
-function AuthPage({ goToAutismPage }) {
+function AuthPage({ goToinformationPage }) {
   const [infoIsOpen, setInfoIsOpen] = useState(false);
   return (
     <>
@@ -125,7 +125,7 @@ function AuthPage({ goToAutismPage }) {
           <div><RegForm /></div>
         </CollapseButton>
       </div>
-      <button onClick={goToAutismPage} style={{ backgroundColor: "#000000", padding: "10px 10px", }}><div style={{ color: "#845BFF", background: "#EEEDEB", borderRadius: "20px", fontSize: "30px" }}>{">"}</div></button>
+      <button onClick={goToinformationPage} style={{ backgroundColor: "#000000", padding: "10px 10px", }}><div style={{ color: "#845BFF", background: "#EEEDEB", borderRadius: "20px", fontSize: "30px" }}>{">"}</div></button>
     </>
   );
 }
@@ -241,7 +241,7 @@ function InfoPage() {
   );
 }
 
-function AutismPage({ goToAuth }) {
+function InformationPage({ goToAuth }) {
   return (
     <div style={{ display: "flex", background: "E1D6E8" }}>
       <button onClick={goToAuth} style={{ backgroundColor: "#000000", padding: "10px 10px", }}><div style={{ color: "#845BFF", background: "#EEEDEB", borderRadius: "20px", fontSize: "30px" }}>{"<"}</div></button>
@@ -265,7 +265,7 @@ function App() {
               display: "flex",
               padding: "20px",
               borderBottom: "1px solid black",
-              background: page === "autism" ? "#E1D6E7" : "#EFEEEC",
+              background: page === "information" ? "#E1D6E7" : "#EFEEEC",
             }}
           >
             <span>О системе</span>
@@ -317,7 +317,7 @@ function App() {
                 </button>
               </div>
             ) : page === "auth" ? (
-              <AuthPage goToAutismPage={() => setPage("autism")} />
+              <AuthPage goToinformationPage={() => setPage("information")} />
             ) :
               infoIsOpen ? (
                 <div style={{ border: "1px solid black", width: "100%" }}>
@@ -330,8 +330,8 @@ function App() {
                   >
                   </button>
                 </div>
-              ) : page === "autism" ? (
-                <AutismPage goToAuth={() => setPage("auth")} />
+              ) : page === "information" ? (
+                <InformationPage goToAuth={() => setPage("auth")} />
               ) :
                 null}
           </main>
