@@ -131,7 +131,7 @@ function AuthPage({ goToAutismPage }) {
 }
 
 
-function MagicButton() {
+function MagicButton({ goToAuth }) {
   const buttonStyle = {
     opacity: 0.1,
     transition: 'opacity 1s ease',
@@ -149,7 +149,7 @@ function MagicButton() {
 
   return (
     <button style={buttonStyle}>
-      Домой
+      Домой{goToAuth}
     </button>
   );
 }
@@ -159,7 +159,7 @@ function MagicButton() {
 function LandingPage({ goToAuth }) {
   return (
     <div style={{ backgroundColor: "#F5F1E7", width: "100%" }}>
-      <MagicButton />
+      <MagicButton goToAuth={() => goToAuth} />
       < img src={katarium} alt="katarium" style={{ width: "100%" }} />
       <p style={{ fontFamily: "Romile Personal Use", fontSize: "92px", paddingLeft: "230px", paddingRight: "230px" }}>ИСТОРИЯ</p>
       <p style={{ paddingLeft: "230px", paddingRight: "230px", fontFamily: "IBM Plex Sans", fontSize: "28px" }}>
